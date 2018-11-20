@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<script type="text/javascript" src="./Multiply_Add Calculator_files/jquery-1.8.3.js.download"></script><style></style>
+
+<title>Multiply/Add Calculator</title>
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+$(document).ready(function() {
+    //this calculates values automatically
+    func();
+    $("#num1, #num2").on("keydown keyup", function() {
+        func();
+    });
+});
+
+function func() {
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+			var result = -2 * parseInt(num1) / (-1 * parseInt(num2) + Math.sqrt(parseInt(num2) * parseInt(num2) - 4 * parseInt(num1)));
+			var result1 = -2 * parseInt(num1) / (-1 * parseInt(num2) - Math.sqrt(parseInt(num2) * parseInt(num2) - 4 * parseInt(num1)));
+            if (!isNaN(result)) {
+                document.getElementById('xres').value = result;
+				document.getElementById('yres').value = result1;
+            }
+        }
+});//]]>
+
+</script>
+
+</head>
+<body>
+
+<h1>Factorization Calculator</h1>
+
+<p>If you have the sum of two numbers as well as the product those numbers, you can use this online calculator to calculate the actual numbers for you:</p>
+
+<form name="form1" method="post" action="http://timtechsoftware.com/uploads/calc/ma-calc.htm">
+<table>
+<tbody><tr><td>X*Y=</td><td><input type="text" name="num1" id="num1"></td></tr>
+<tr><td>X+Y=</td><td><input type="text" name="num2" id="num2"></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>X=</td><td><input type="text" name="xres" id="xres" readonly=""></td></tr>
+<tr><td>Y=</td><td><input type="text" name="yres" id="yres" readonly=""></td></tr>
+</tbody></table>
+</form>
+
+<p>If the results are blank, there are no real numbers that fulfill the requirements.
+
+</p><p><em>Copyright � 2015-2018 TimTech Software</em></p>
+
+
+</body></html>
