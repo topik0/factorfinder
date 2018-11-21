@@ -1,19 +1,19 @@
 $(window).load(function(){
 $(document).ready(function() {
-    func();
-    $("#num1, #num2").on("keydown keyup", function() {
-        func();
+    mainCruncher();
+    $("#firstNumber, #secondNumber").on("keydown keyup", function() {
+        mainCruncher();
     });
 });
 
-function func() {
-            var num1 = document.getElementById('num1').value;
-            var num2 = document.getElementById('num2').value;
-			var result = -2 * parseInt(num1) / (-1 * parseInt(num2) + Math.sqrt(parseInt(num2) * parseInt(num2) - 4 * parseInt(num1)));
-			var result1 = -2 * parseInt(num1) / (-1 * parseInt(num2) - Math.sqrt(parseInt(num2) * parseInt(num2) - 4 * parseInt(num1)));
+function mainCruncher() {
+            var firstNumber = document.getElementById('firstNumber').value;
+            var secondNumber = document.getElementById('secondNumber').value;
+			var result = -2 * parseInt(firstNumber) / (-1 * parseInt(secondNumber) + Math.sqrt(parseInt(secondNumber) * parseInt(secondNumber) - 4 * parseInt(firstNumber)));
+			var result1 = -2 * parseInt(firstNumber) / (-1 * parseInt(secondNumber) - Math.sqrt(parseInt(secondNumber) * parseInt(secondNumber) - 4 * parseInt(firstNumber)));
             if (!isNaN(result)) {
-                document.getElementById('xres').value = result;
-				document.getElementById('yres').value = result1;
+                document.getElementById('xValue').value = result;
+				document.getElementById('yValue').value = result1;
             }
         }
 });
