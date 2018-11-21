@@ -50,34 +50,58 @@ button{
 /* End Reset CSS */
 html{
   font-family: 'Noto Sans', sans-serif;
+  background-color: #1e1e1e;
+  color: white;
 }
 .mainTitle{
-  font-size: 85px;
+  font-size: 10vh;
   text-align: center;
   margin-top: 2vh;
   margin-bottom: 2vh;
+}
+.mainDesc{
+	text-align: center;
+	font-size: 3.5vh;
 }
 .mainContainer{
   display: flex;
   justify-content: space-between;
   margin-top: 2vh;
 }
+.valueTitle{
+	margin: 1.4vh;
+}
 .mainContainerOne{
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 32px;
-  margin-left: 200px;
+  font-size: 4vh;
+  margin-left: 7vh;
 }
 .mainContainerTwo{
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 32px;
-  margin-right: 200px;
+  font-size: 4vh;
+  margin-right: 7vh;
 }
 input{
-  width: 600px;
-  height: 90px;
-  font-size: 100px;
+  width: 50vh;
+  height: 10vh;
+  font-size: 7vh;
+	border-radius: .4vh;
+	border: none;
+}
+.secondPara{
+	text-align: center;
+	font-size: 3.5vh;
+	margin-top: 3vh;
+}
+div.mainContainerTwo input:focus{
+  outline: none;
+}
+.madeByTopik{
+	text-align: center;
+	margin-top: 4vh;
+	font-size: 3vh;
 }
