@@ -1,54 +1,29 @@
-
-<!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-
-<script type="text/javascript" src="./jquery-1.8.3.js.download"></script><style></style>
-
-<title>Split the Middle Factoring Calculator</title>
-
-<script type="text/javascript">
-$(window).load(function(){
-$(document).ready(function() {
-    func();
-    $("#num1, #num2").on("keydown keyup", function() {
-        func();
-    });
-});
-
-function func() {
-            var num1 = document.getElementById('num1').value;
-            var num2 = document.getElementById('num2').value;
-			var result = -2 * parseInt(num1) / (-1 * parseInt(num2) + Math.sqrt(parseInt(num2) * parseInt(num2) - 4 * parseInt(num1)));
-			var result1 = -2 * parseInt(num1) / (-1 * parseInt(num2) - Math.sqrt(parseInt(num2) * parseInt(num2) - 4 * parseInt(num1)));
-            if (!isNaN(result)) {
-                document.getElementById('xres').value = result;
-				document.getElementById('yres').value = result1;
-            }
-        }
-});
-
-</script>
-
+<!DOCTYPE HTML>
+<html>
+<head>
+<title class="firstTitle">Factor Finder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="./jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="./cruncher.js"></script>
+<link rel="stylesheet" href="./main.css">
 </head>
 <body>
-
-<h1>Split the Middle Factorization Calculator</h1>
-
-<p>If you have the sum of two numbers as well as the product those numbers, you can use this online calculator to calculate the actual numbers for you:</p>
-
-<form name="form1" method="post" action="http://timtechsoftware.com/uploads/calc/ma-calc.htm">
-<table>
-<tbody><tr><td>X*Y=</td><td><input type="text" name="num1" id="num1"></td></tr>
-<tr><td>X+Y=</td><td><input type="text" name="num2" id="num2"></td></tr>
-<tr><td>&nbsp;</td></tr>
-<tr><td>X=</td><td><input type="text" name="xres" id="xres" readonly=""></td></tr>
-<tr><td>Y=</td><td><input type="text" name="yres" id="yres" readonly=""></td></tr>
-</tbody></table>
-</form>
-
-<p>If the results are blank, there are no real numbers that fulfill the requirements.
-
-</p>
-
-
-</body></html>
+<h1 class="mainTitle">Split the Middle Factorization Calculator</h1>
+<p class="mainDesc">If you are factoring a polynomial and need to split a term, you can use this calculator to find the two numbers for you.</p>
+<div class="mainContainer">
+  <div class="mainContainerOne">
+    <h2 class="valueTitle">X &#8901; Y</h2>
+    <input type="text" name="num1" id="num1">
+    <h2 class="valueTitle">X + Y</h2>
+    <input type="text" name="num2" id="num2">
+  </div>
+  <div class="mainContainerTwo">
+    <h2 class="valueTitle">X=</h2>
+    <input type="text" name="xres" id="xres" readonly="">
+    <h2 class="valueTitle">Y=</h2>
+    <input type="text" name="yres" id="yres" readonly="">
+  </div>
+</div>
+<p class="secondPara">If the results are blank, there are no real numbers that meet the requirements.</p>
+</body>
+</html>
