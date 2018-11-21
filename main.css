@@ -105,3 +105,20 @@ div.mainContainerTwo input:focus{
 	margin-top: 4vh;
 	font-size: 3vh;
 }
+.madeByTopik{
+text-decoration: none;
+color: #ffffff;
+text-decoration-line: none;
+}
+.madeByTopik a:link {
+    color: #ffffff;
+}
+.madeByTopik a:visited {
+    color: #ffffff;
+}
+.madeByTopik a:hover {
+    color: #ffffff;
+}
+.madeByTopik a:active {
+    color: #ffffff;
+}
